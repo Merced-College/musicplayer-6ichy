@@ -10,7 +10,7 @@
 
 // --- Global Objects ---
 // These instances "ghost" the logic until the .cpp files are finished.
-AudioPlayer player(10,11);
+AudioPlayer player(2,3);
 Playlist myPlaylist;
 
 void setup() {

@@ -13,7 +13,7 @@ void Playlist::initializeTracks() {
     addTrack(5, "Track Five");
     addTrack(6, "Track Six");
     addTrack(7, "Track Seven");
-    addTrack(8, "Track eight");
+    addTrack(8, "Track Eight");
     Serial.println(F("Playlist populated."));
 }
 

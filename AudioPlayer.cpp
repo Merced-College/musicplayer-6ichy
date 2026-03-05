@@ -6,12 +6,14 @@ AudioPlayer::AudioPlayer(int rx, int tx) {
 
 void AudioPlayer::init() {
     mySerial->begin(9600);
+    delay(500); // Give the SoftwareSerial a moment to stabilize
     if (!myDFPlayer.begin(*mySerial)) {
         Serial.println(F("DFPlayer Error: Check wiring/SD card."));
         setState(PlayerState::ERROR);
         return;
     }
-    myDFPlayer.volume(currentVolume);
+    delay(500); // Give the DFPlayer a moment to read the SD card
+    myDFPlayer.volume(25); // Set it a bit higher (0-30) for testing
     setState(PlayerState::STOPPED);
     Serial.println(F("DFPlayer Ready."));
 }
